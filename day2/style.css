@@ -1,0 +1,153 @@
+/* Box-sizing border-box reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f5;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Navigation with Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    /* Centred row */
+    gap: 16px;
+    /* 16px gap */
+}
+
+nav a {
+    color: white;
+    /* White text */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s ease;
+    /* Transition for navigation links */
+}
+
+nav a:hover {
+    color: #60a5fa;
+    /* Visible hover style */
+}
+
+/* Main Container */
+main {
+    max-width: 800px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Automatic left and right margins to centre */
+    padding: 40px 20px;
+}
+
+/* White Card Look for Sections */
+section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Features List with CSS Grid */
+ul.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Responsive cards */
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+ul.features li {
+    background-color: #f9fafb;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Shortcuts Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #d1d5db;
+    /* Borders on cells */
+    padding: 12px;
+    /* Padding on cells */
+    text-align: left;
+}
+
+/* Feedback Form */
+form {
+    display: flex;
+    flex-direction: column;
+    /* Stack fields vertically */
+    width: 100%;
+}
+
+form label {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+form br {
+    display: none;
+    /* Hidden since flex-direction handles the stacking */
+}
+
+/* Button with Transition */
+button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Transition on button */
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    header {
+        padding: 20px 10px;
+        /* Reduced padding */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        /* Reduced font size */
+    }
+}
