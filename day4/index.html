@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickNotes live character and word counter with dark mode support.">
+    <title>Live Character Counter & Dark Mode | QuickNotes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Script loaded with defer -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-titles">
+                <h1>QuickNotes</h1>
+                <p class="subtitle">Live Character Counter & Dark Mode</p>
+            </div>
+            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="editor-card">
+            <div class="editor-header">
+                <label for="note-text" class="editor-label">Your Note</label>
+                <span class="max-badge">Max 200 characters</span>
+            </div>
+
+            <textarea id="note-text" name="note-text" rows="6" placeholder="Type your note here... (Press Esc to clear)" spellcheck="true"></textarea>
+
+            <div class="counter-bar">
+                <div class="counts">
+                    <p id="char-count">0 / 200 characters</p>
+                    <p id="word-count">0 words</p>
+                </div>
+                <div class="actions">
+                    <button id="clear-btn" type="button" title="Clear note (or press Esc)">Clear</button>
+                </div>
+            </div>
+
+            <div class="tips-box">
+                <small>Tip: Press <kbd>Esc</kbd> while typing in the note area to instantly clear your draft. Your notes are automatically saved locally.</small>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 QuickNotes &bull; Web Foundations</p>
+    </footer>
+</body>
+
+</html>
