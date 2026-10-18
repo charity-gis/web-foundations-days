@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Day 5 Assignment: User Directory fetched asynchronously from JSONPlaceholder with live filtering.">
+    <title>User Directory | Day 5 Assignment</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Users script loaded with defer -->
+    <script src="users.js" defer></script>
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="header-inner">
+            <h1>User Directory</h1>
+            <p class="subtitle">Web Foundations Day 5 &bull; Asynchronous JavaScript &amp; API Integration</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="controls-card">
+            <div class="actions-row">
+                <button id="load-users" type="button" class="btn btn-primary">Load Users</button>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-input" class="form-label">Filter by name:</label>
+                <input type="text" id="filter-input" class="form-input" placeholder="Search users by name..." autocomplete="off">
+            </div>
+
+            <!-- Status message element -->
+            <p id="status" class="status-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="users-section">
+            <h2 class="section-title">Directory Members</h2>
+            <!-- Empty users list to be populated dynamically -->
+            <ul id="users-list" class="users-list" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Web Foundations &bull; Day 5 Assignment</p>
+    </footer>
+</body>
+
+</html>
